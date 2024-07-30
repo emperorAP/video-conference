@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Conference</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-5">Video Conference</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <video id="localVideo" class="w-100" autoplay playsinline></video>
+        </div>
+        <div class="col-md-6">
+          <video id="remoteVideo" class="w-100" autoplay playsinline></video>
+        </div>
+      </div>
+      <div class="text-center mt-3">
+        <button id="startButton" class="btn btn-primary">Start</button>
+        <button id="stopButton" class="btn btn-danger">Stop</button>
+        <button id="muteButton" class="btn btn-secondary">Mute</button>
+        <button id="unmuteButton" class="btn btn-secondary">Unmute</button>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
